@@ -15,12 +15,12 @@ dependencies {
 }
 
 tasks.register("apiTest", Test) {
-    useJUnitPlatform()
+    useJUnit()
     systemProperty 'cucumber.filter.tags', '@api'
 }
 
 tasks.register("webTest", Test) {
-    useJUnitPlatform()
+    useJUnit()
     systemProperty 'cucumber.filter.tags', '@web'
 }
 
