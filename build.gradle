@@ -20,7 +20,7 @@ tasks.register("apiTest", Test) {
 }
 
 tasks.register("webTest", Test) {
-    useJUnit()
+    useJUnitPlatform()
     systemProperty 'cucumber.filter.tags', '@web'
 }
 
