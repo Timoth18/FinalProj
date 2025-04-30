@@ -23,3 +23,7 @@ tasks.register("webTest", Test) {
     useJUnitPlatform()
     systemProperty 'cucumber.filter.tags', '@web'
 }
+
+test {
+    useJUnit()
+}
