@@ -1,13 +1,14 @@
 
 package web.stepdefinitions;
 
-import io.cucumber.java.en.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import static org.junit.jupiter.api.Assertions.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 
 public class HomePageSteps {
 
@@ -25,12 +26,10 @@ public class HomePageSteps {
         assertTrue(logo.isDisplayed());
         driver.quit();
     }
-}
-
-
     @Then("I should see the {string} section")
     public void i_should_see_the_section(String sectionText) {
         WebElement category = driver.findElement(By.xpath("//a[text()='" + sectionText + "']"));
         assertTrue(category.isDisplayed());
         driver.quit();
     }
+}
