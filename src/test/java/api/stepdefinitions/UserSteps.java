@@ -20,28 +20,28 @@ public class UserSteps {
     @When("I send GET request to the user endpoint")
     public void iSendGETRequestToTheUserEndpoint() {
         response = given()
-                .header("app-id", "648b1f2826887a5a2b716dc1")
+                .header("app-id", "63a804408eb0cb069b57e43a")
                 .get("https://dummyapi.io/data/v1/user/" + userId);
     }
 
     @When("I send GET request to the users endpoint")
     public void iSendGETRequestToTheUsersEndpoint() {
         response = given()
-                .header("app-id", "648b1f2826887a5a2b716dc1")
+                .header("app-id", "63a804408eb0cb069b57e43a")
                 .get("https://dummyapi.io/data/v1/user");
     }
 
     @When("I send GET request to the tags endpoint")
     public void iSendGETRequestToTheTagsEndpoint() {
         response = given()
-                .header("app-id", "648b1f2826887a5a2b716dc1")
+                .header("app-id", "63a804408eb0cb069b57e43a")
                 .get("https://dummyapi.io/data/v1/tag");
     }
 
     @When("I send GET request to the users page endpoint with page {int} and limit {int}")
     public void iSendGETRequestToTheUsersPageEndpoint(int page, int limit) {
         response = given()
-                .header("app-id", "648b1f2826887a5a2b716dc1")
+                .header("app-id", "63a804408eb0cb069b57e43a")
                 .get("https://dummyapi.io/data/v1/user?page=" + page + "&limit=" + limit);
     }
 

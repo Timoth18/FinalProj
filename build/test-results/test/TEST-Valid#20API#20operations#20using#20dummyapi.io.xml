@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Valid API operations using dummyapi.io" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-04-30T09:57:30" hostname="SALES" time="14.306">
+  <properties/>
+  <testcase name="Get a user by valid ID" classname="Valid API operations using dummyapi.io" time="8.912"/>
+  <testcase name="Try to get a non-existing user (Negative)" classname="Valid API operations using dummyapi.io" time="0.514"/>
+  <testcase name="Get list of users" classname="Valid API operations using dummyapi.io" time="1.298"/>
+  <testcase name="Get tags" classname="Valid API operations using dummyapi.io" time="3.046"/>
+  <testcase name="Get paginated list of users" classname="Valid API operations using dummyapi.io" time="0.535"/>
+  <system-out><![CDATA[
+@api
+Scenario: Get a user by valid ID                  ?[90m# src/test/resources/api/features/user.feature:4?[0m
+  ?[32mGiven ?[0m?[32mthe user ID is ?[0m?[32m?[1m"60d0fe4f5311236168a10a00"?[0m ?[90m# api.stepdefinitions.UserSteps.theUserIDIs(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI send GET request to the user endpoint?[0m    ?[90m# api.stepdefinitions.UserSteps.iSendGETRequestToTheUserEndpoint()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m200?[0m     ?[90m# api.stepdefinitions.UserSteps.theResponseStatusCodeShouldBe(int)?[0m
+  ?[32mAnd ?[0m?[32mthe user data should contain ?[0m?[32m?[1m"firstName"?[0m    ?[90m# api.stepdefinitions.UserSteps.theUserDataShouldContain(java.lang.String)?[0m
+
+@api
+Scenario: Try to get a non-existing user (Negative) ?[90m# src/test/resources/api/features/user.feature:10?[0m
+  ?[32mGiven ?[0m?[32mthe user ID is ?[0m?[32m?[1m"60d0fe4f5311236168a10a88"?[0m   ?[90m# api.stepdefinitions.UserSteps.theUserIDIs(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI send GET request to the user endpoint?[0m      ?[90m# api.stepdefinitions.UserSteps.iSendGETRequestToTheUserEndpoint()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m404?[0m       ?[90m# api.stepdefinitions.UserSteps.theResponseStatusCodeShouldBe(int)?[0m
+
+@api
+Scenario: Get list of users                     ?[90m# src/test/resources/api/features/user.feature:15?[0m
+  ?[32mWhen ?[0m?[32mI send GET request to the users endpoint?[0m ?[90m# api.stepdefinitions.UserSteps.iSendGETRequestToTheUsersEndpoint()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m200?[0m   ?[90m# api.stepdefinitions.UserSteps.theResponseStatusCodeShouldBe(int)?[0m
+  ?[32mAnd ?[0m?[32mthe response should contain ?[0m?[32m?[1m"data"?[0m        ?[90m# api.stepdefinitions.UserSteps.theResponseShouldContain(java.lang.String)?[0m
+
+@api
+Scenario: Get tags                             ?[90m# src/test/resources/api/features/user.feature:20?[0m
+  ?[32mWhen ?[0m?[32mI send GET request to the tags endpoint?[0m ?[90m# api.stepdefinitions.UserSteps.iSendGETRequestToTheTagsEndpoint()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m200?[0m  ?[90m# api.stepdefinitions.UserSteps.theResponseStatusCodeShouldBe(int)?[0m
+  ?[32mAnd ?[0m?[32mthe response should contain ?[0m?[32m?[1m"data"?[0m       ?[90m# api.stepdefinitions.UserSteps.theResponseShouldContain(java.lang.String)?[0m
+
+@api
+Scenario: Get paginated list of users                                        ?[90m# src/test/resources/api/features/user.feature:25?[0m
+  ?[32mWhen ?[0m?[32mI send GET request to the users page endpoint with page ?[0m?[32m?[1m1?[0m?[32m and limit ?[0m?[32m?[1m5?[0m ?[90m# api.stepdefinitions.UserSteps.iSendGETRequestToTheUsersPageEndpoint(int,int)?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m200?[0m                                ?[90m# api.stepdefinitions.UserSteps.theResponseStatusCodeShouldBe(int)?[0m
+  ?[32mAnd ?[0m?[32mthe response should contain ?[0m?[32m?[1m"data"?[0m                                     ?[90m# api.stepdefinitions.UserSteps.theResponseShouldContain(java.lang.String)?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

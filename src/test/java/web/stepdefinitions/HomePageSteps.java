@@ -4,99 +4,99 @@ import io.cucumber.java.en.*;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.*;
+
+import java.time.Duration;
 
 public class HomePageSteps {
-
-    WebDriver driver;
+    WebDriver driver = new ChromeDriver();
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
     @Given("I navigate to the demoblaze homepage")
     public void iNavigateToTheDemoblazeHomepage() {
-        driver = new ChromeDriver();
         driver.get("https://www.demoblaze.com/");
+        driver.manage().window().maximize();
     }
 
     @Then("I should see the title {string}")
-    public void iShouldSeeTheTitle(String title) {
-        Assert.assertTrue(driver.getPageSource().contains(title));
-        driver.quit();
+    public void iShouldSeeTheTitle(String expectedTitle) {
+        WebElement title = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("nava")));
+        Assert.assertTrue(title.getText().contains(expectedTitle));
     }
 
     @When("I click on the {string} category")
     public void iClickOnTheCategory(String category) {
-        driver.findElement(By.linkText(category)).click();
+        WebElement categoryElement = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='" + category + "']")));
+        categoryElement.click();
     }
 
     @Then("I should see phones listed")
     public void iShouldSeePhonesListed() {
-        Assert.assertTrue(driver.getPageSource().contains("Samsung"));
-        driver.quit();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(),'Samsung galaxy')]")));
+        Assert.assertTrue(driver.findElements(By.className("card-title")).size() > 0);
     }
 
     @When("I click on the first product")
     public void iClickOnTheFirstProduct() {
-        driver.findElement(By.cssSelector("#tbodyid .card-title a")).click();
+        WebElement firstProduct = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".card-title a")));
+        firstProduct.click();
     }
 
     @Then("I should see the product details")
     public void iShouldSeeTheProductDetails() {
-        Assert.assertTrue(driver.getPageSource().contains("Product description"));
-        driver.quit();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("name")));
+        Assert.assertTrue(driver.findElement(By.className("name")).isDisplayed());
     }
 
     @When("I login with {string} and {string}")
-    public void iLoginWithAnd(String username, String password) {
+    public void iLoginWithAnd(String username, String password) throws InterruptedException {
         driver.findElement(By.id("login2")).click();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException ignored) {
-        }
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername")));
         driver.findElement(By.id("loginusername")).sendKeys(username);
         driver.findElement(By.id("loginpassword")).sendKeys(password);
         driver.findElement(By.xpath("//button[text()='Log in']")).click();
+        Thread.sleep(3000); // Wait for alert
     }
 
     @Then("I should see a login error")
     public void iShouldSeeALoginError() {
-        Alert alert = driver.switchTo().alert();
-        Assert.assertTrue(alert.getText().toLowerCase().contains("wrong"));
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        Assert.assertTrue(alert.getText().toLowerCase().contains("user does not exist."));
         alert.accept();
-        driver.quit();
     }
 
     @And("I add it to the cart")
-    public void iAddItToTheCart() {
-        driver.findElement(By.linkText("Add to cart")).click();
+    public void iAddItToTheCart() throws InterruptedException {
+        WebElement addToCart = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='Add to cart']")));
+        addToCart.click();
+        Thread.sleep(2000); // Wait for alert
     }
 
     @Then("I should see a confirmation alert")
     public void iShouldSeeAConfirmationAlert() {
-        Alert alert = driver.switchTo().alert();
-        Assert.assertTrue(alert.getText().contains("Product added"));
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        Assert.assertTrue(alert.getText().toLowerCase().contains("product added"));
         alert.accept();
-        driver.quit();
     }
 
     @And("I go to the cart and place the order with details")
-    public void iGoToTheCartAndPlaceTheOrderWithDetails() {
+    public void iGoToTheCartAndPlaceTheOrderWithDetails() throws InterruptedException {
         driver.findElement(By.id("cartur")).click();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException ignored) {
-        }
-        driver.findElement(By.xpath("//button[text()='Place Order']")).click();
-        driver.findElement(By.id("name")).sendKeys("Test User");
-        driver.findElement(By.id("country")).sendKeys("Indonesia");
-        driver.findElement(By.id("city")).sendKeys("Jakarta");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Place Order']"))).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("name"))).sendKeys("Test User");
+        driver.findElement(By.id("country")).sendKeys("Testland");
+        driver.findElement(By.id("city")).sendKeys("Test City");
         driver.findElement(By.id("card")).sendKeys("1234123412341234");
-        driver.findElement(By.id("month")).sendKeys("12");
+        driver.findElement(By.id("month")).sendKeys("04");
         driver.findElement(By.id("year")).sendKeys("2025");
         driver.findElement(By.xpath("//button[text()='Purchase']")).click();
     }
 
     @Then("I should see a purchase confirmation")
     public void iShouldSeeAPurchaseConfirmation() {
-        WebElement confirmation = driver.findElement(By.className("sweet-alert"));
-        Assert.assertTrue(confirmation.getText().contains("Thank you"));
+        WebElement confirmation = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("sweet-alert")));
+        Assert.assertTrue(confirmation.getText().contains("Thank you for your purchase!"));
+        driver.findElement(By.xpath("//button[text()='OK']")).click();
         driver.quit();
     }
 }

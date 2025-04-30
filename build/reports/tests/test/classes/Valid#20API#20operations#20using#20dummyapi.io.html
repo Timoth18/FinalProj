@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Valid API operations using dummyapi.io</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Valid API operations using dummyapi.io</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/Valid API operations using dummyapi.html">Valid API operations using dummyapi</a> &gt; io</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">5</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">14.305s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Get a user by valid ID</td>
+<td class="success">8.912s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Get list of users</td>
+<td class="success">1.298s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Get paginated list of users</td>
+<td class="success">0.535s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Get tags</td>
+<td class="success">3.046s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Try to get a non-existing user (Negative)</td>
+<td class="success">0.514s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+@api
+Scenario: Get a user by valid ID                  ?[90m# src/test/resources/api/features/user.feature:4?[0m
+  ?[32mGiven ?[0m?[32mthe user ID is ?[0m?[32m?[1m&quot;60d0fe4f5311236168a10a00&quot;?[0m ?[90m# api.stepdefinitions.UserSteps.theUserIDIs(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI send GET request to the user endpoint?[0m    ?[90m# api.stepdefinitions.UserSteps.iSendGETRequestToTheUserEndpoint()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m200?[0m     ?[90m# api.stepdefinitions.UserSteps.theResponseStatusCodeShouldBe(int)?[0m
+  ?[32mAnd ?[0m?[32mthe user data should contain ?[0m?[32m?[1m&quot;firstName&quot;?[0m    ?[90m# api.stepdefinitions.UserSteps.theUserDataShouldContain(java.lang.String)?[0m
+
+@api
+Scenario: Try to get a non-existing user (Negative) ?[90m# src/test/resources/api/features/user.feature:10?[0m
+  ?[32mGiven ?[0m?[32mthe user ID is ?[0m?[32m?[1m&quot;60d0fe4f5311236168a10a88&quot;?[0m   ?[90m# api.stepdefinitions.UserSteps.theUserIDIs(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI send GET request to the user endpoint?[0m      ?[90m# api.stepdefinitions.UserSteps.iSendGETRequestToTheUserEndpoint()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m404?[0m       ?[90m# api.stepdefinitions.UserSteps.theResponseStatusCodeShouldBe(int)?[0m
+
+@api
+Scenario: Get list of users                     ?[90m# src/test/resources/api/features/user.feature:15?[0m
+  ?[32mWhen ?[0m?[32mI send GET request to the users endpoint?[0m ?[90m# api.stepdefinitions.UserSteps.iSendGETRequestToTheUsersEndpoint()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m200?[0m   ?[90m# api.stepdefinitions.UserSteps.theResponseStatusCodeShouldBe(int)?[0m
+  ?[32mAnd ?[0m?[32mthe response should contain ?[0m?[32m?[1m&quot;data&quot;?[0m        ?[90m# api.stepdefinitions.UserSteps.theResponseShouldContain(java.lang.String)?[0m
+
+@api
+Scenario: Get tags                             ?[90m# src/test/resources/api/features/user.feature:20?[0m
+  ?[32mWhen ?[0m?[32mI send GET request to the tags endpoint?[0m ?[90m# api.stepdefinitions.UserSteps.iSendGETRequestToTheTagsEndpoint()?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m200?[0m  ?[90m# api.stepdefinitions.UserSteps.theResponseStatusCodeShouldBe(int)?[0m
+  ?[32mAnd ?[0m?[32mthe response should contain ?[0m?[32m?[1m&quot;data&quot;?[0m       ?[90m# api.stepdefinitions.UserSteps.theResponseShouldContain(java.lang.String)?[0m
+
+@api
+Scenario: Get paginated list of users                                        ?[90m# src/test/resources/api/features/user.feature:25?[0m
+  ?[32mWhen ?[0m?[32mI send GET request to the users page endpoint with page ?[0m?[32m?[1m1?[0m?[32m and limit ?[0m?[32m?[1m5?[0m ?[90m# api.stepdefinitions.UserSteps.iSendGETRequestToTheUsersPageEndpoint(int,int)?[0m
+  ?[32mThen ?[0m?[32mthe response status code should be ?[0m?[32m?[1m200?[0m                                ?[90m# api.stepdefinitions.UserSteps.theResponseStatusCodeShouldBe(int)?[0m
+  ?[32mAnd ?[0m?[32mthe response should contain ?[0m?[32m?[1m&quot;data&quot;?[0m                                     ?[90m# api.stepdefinitions.UserSteps.theResponseShouldContain(java.lang.String)?[0m
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.11.1</a> at 30 Apr 2025, 17.00.01</p>
+</div>
+</div>
+</body>
+</html>

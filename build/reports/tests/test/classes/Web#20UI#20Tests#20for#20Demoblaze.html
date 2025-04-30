@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Web UI Tests for Demoblaze</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Web UI Tests for Demoblaze</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Web UI Tests for Demoblaze</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">6</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">2m12.26s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Add product to cart</td>
+<td class="success">18.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">End-to-End Test - Add to cart and place order</td>
+<td class="success">44.642s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Open a product from the homepage</td>
+<td class="success">10.416s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Open homepage and verify title</td>
+<td class="success">10.631s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Try login with wrong credentials (Negative)</td>
+<td class="success">36.712s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">View category Phones</td>
+<td class="success">11.860s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+@web
+Scenario: Open homepage and verify title      ?[90m# src/test/resources/web/features/login.feature:4?[0m
+  ?[32mGiven ?[0m?[32mI navigate to the demoblaze homepage?[0m  ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
+  ?[32mThen ?[0m?[32mI should see the title ?[0m?[32m?[1m&quot;PRODUCT STORE&quot;?[0m ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeTheTitle(java.lang.String)?[0m
+
+@web
+Scenario: View category Phones               ?[90m# src/test/resources/web/features/login.feature:8?[0m
+  ?[32mGiven ?[0m?[32mI navigate to the demoblaze homepage?[0m ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
+  ?[32mWhen ?[0m?[32mI click on the ?[0m?[32m?[1m&quot;Phones&quot;?[0m?[32m category?[0m      ?[90m# web.stepdefinitions.HomePageSteps.iClickOnTheCategory(java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mI should see phones listed?[0m            ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeePhonesListed()?[0m
+
+@web
+Scenario: Open a product from the homepage   ?[90m# src/test/resources/web/features/login.feature:13?[0m
+  ?[32mGiven ?[0m?[32mI navigate to the demoblaze homepage?[0m ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
+  ?[32mWhen ?[0m?[32mI click on the first product?[0m          ?[90m# web.stepdefinitions.HomePageSteps.iClickOnTheFirstProduct()?[0m
+  ?[32mThen ?[0m?[32mI should see the product details?[0m      ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeTheProductDetails()?[0m
+
+@web
+Scenario: Try login with wrong credentials (Negative)      ?[90m# src/test/resources/web/features/login.feature:18?[0m
+  ?[32mGiven ?[0m?[32mI navigate to the demoblaze homepage?[0m               ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
+  ?[32mWhen ?[0m?[32mI login with ?[0m?[32m?[1m&quot;RANDOMUSERNAMEKOKOKO&quot;?[0m?[32m and ?[0m?[32m?[1m&quot;wrongpass&quot;?[0m ?[90m# web.stepdefinitions.HomePageSteps.iLoginWithAnd(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mI should see a login error?[0m                          ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeALoginError()?[0m
+
+@web
+Scenario: Add product to cart                ?[90m# src/test/resources/web/features/login.feature:23?[0m
+  ?[32mGiven ?[0m?[32mI navigate to the demoblaze homepage?[0m ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
+  ?[32mWhen ?[0m?[32mI click on the first product?[0m          ?[90m# web.stepdefinitions.HomePageSteps.iClickOnTheFirstProduct()?[0m
+  ?[32mAnd ?[0m?[32mI add it to the cart?[0m                   ?[90m# web.stepdefinitions.HomePageSteps.iAddItToTheCart()?[0m
+  ?[32mThen ?[0m?[32mI should see a confirmation alert?[0m     ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeAConfirmationAlert()?[0m
+
+@web
+Scenario: End-to-End Test - Add to cart and place order ?[90m# src/test/resources/web/features/login.feature:29?[0m
+  ?[32mGiven ?[0m?[32mI navigate to the demoblaze homepage?[0m            ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
+  ?[32mWhen ?[0m?[32mI click on the first product?[0m                     ?[90m# web.stepdefinitions.HomePageSteps.iClickOnTheFirstProduct()?[0m
+  ?[32mAnd ?[0m?[32mI add it to the cart?[0m                              ?[90m# web.stepdefinitions.HomePageSteps.iAddItToTheCart()?[0m
+  ?[32mAnd ?[0m?[32mI should see a confirmation alert?[0m                 ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeAConfirmationAlert()?[0m
+  ?[32mAnd ?[0m?[32mI go to the cart and place the order with details?[0m ?[90m# web.stepdefinitions.HomePageSteps.iGoToTheCartAndPlaceTheOrderWithDetails()?[0m
+  ?[32mThen ?[0m?[32mI should see a purchase confirmation?[0m             ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeAPurchaseConfirmation()?[0m
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Apr 30, 2025 4:57:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 135
+Apr 30, 2025 4:57:50 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Apr 30, 2025 4:57:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 135
+Apr 30, 2025 4:57:59 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Apr 30, 2025 4:58:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 135
+Apr 30, 2025 4:58:10 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Apr 30, 2025 4:58:32 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 135
+Apr 30, 2025 4:58:32 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Apr 30, 2025 4:59:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 135
+Apr 30, 2025 4:59:02 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Apr 30, 2025 4:59:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 135
+Apr 30, 2025 4:59:19 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.11.1</a> at 30 Apr 2025, 17.00.01</p>
+</div>
+</div>
+</body>
+</html>
