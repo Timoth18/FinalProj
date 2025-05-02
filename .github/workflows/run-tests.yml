@@ -32,5 +32,5 @@ jobs:
       - name: Upload HTML report
         uses: actions/upload-artifact@v4
         with:
-          name: index
-          path: C:\Users\sulth\FinalProj\build\reports\tests\test
+          name: index.html
+          path: \build\reports\tests\test
