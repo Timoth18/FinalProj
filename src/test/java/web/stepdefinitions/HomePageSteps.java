@@ -13,18 +13,18 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.time.Duration;
 
 public class HomePageSteps {
+WebDriver driver;
+WebDriverWait wait;
 
+public HomePageSteps() {
     ChromeOptions options = new ChromeOptions();
-    options.addArguments("--headless"); // Use "--headless" if using older Chrome versions
+    options.addArguments("--headless=new"); // or "--headless"
     options.addArguments("--no-sandbox");
     options.addArguments("--disable-dev-shm-usage");
 
-    // Initialize the WebDriver with headless Chrome
-    WebDriver driver = new ChromeDriver(options);
-
-    // Wait setup
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
+    driver = new ChromeDriver(options);
+    wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    }
 
     @Given("I navigate to the demoblaze homepage")
     public void iNavigateToTheDemoblazeHomepage() {
