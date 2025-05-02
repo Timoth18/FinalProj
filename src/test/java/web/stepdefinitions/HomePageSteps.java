@@ -5,12 +5,28 @@ import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.*;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
 public class HomePageSteps {
-    WebDriver driver = new ChromeDriver();
+    WebDriver driver;
+    WebDriverWait wait;
+
+    public HomePageSteps() {
+    ChromeOptions options = new ChromeOptions();
+    options.addArguments("--headless=new"); // Use "--headless" if using older Chrome versions
+    options.addArguments("--no-sandbox");
+    options.addArguments("--disable-dev-shm-usage");
+
+    // Initialize the WebDriver with headless Chrome
+    WebDriver driver = new ChromeDriver(options);
+
+    // Wait setup
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    }
 
     @Given("I navigate to the demoblaze homepage")
     public void iNavigateToTheDemoblazeHomepage() {
