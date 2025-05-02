@@ -28,3 +28,12 @@ jobs:
 
       - name: Run Web Tests
         run: ./gradlew webTest
+
+      - name: Upload HTML Test Report
+        if: always() # always upload report, even if tests fail
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-report
+          path: build/reports/tests/test  # ✅ HTML report is here by default
+
+        
