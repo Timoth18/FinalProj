@@ -2,6 +2,7 @@ package web.stepdefinitions;
 
 import io.cucumber.java.en.*;
 import org.junit.Assert;
+import org.junit.Before;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.*;
@@ -12,12 +13,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.time.Duration;
 
 public class HomePageSteps {
-    WebDriver driver;
-    WebDriverWait wait;
 
-    public HomePageSteps() {
     ChromeOptions options = new ChromeOptions();
-    options.addArguments("--headless=new"); // Use "--headless" if using older Chrome versions
+    options.addArguments("--headless"); // Use "--headless" if using older Chrome versions
     options.addArguments("--no-sandbox");
     options.addArguments("--disable-dev-shm-usage");
 
@@ -26,7 +24,7 @@ public class HomePageSteps {
 
     // Wait setup
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    }
+
 
     @Given("I navigate to the demoblaze homepage")
     public void iNavigateToTheDemoblazeHomepage() {

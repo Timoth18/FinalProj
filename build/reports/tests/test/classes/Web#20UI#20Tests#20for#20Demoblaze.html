@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">6</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">2m12.26s</div>
+<div class="counter">0.179s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,16 +61,79 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
 </li>
 <li>
-<a href="#tab2">Standard error</a>
+<a href="#tab2">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="Add product to cart"></a>
+<h3 class="failures">Add product to cart</h3>
+<span class="code">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage(HomePageSteps.java:35)
+	at ✽.I navigate to the demoblaze homepage(file:///C:/Users/sulth/FinalProj/src/test/resources/web/features/login.feature:24)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="End-to-End Test - Add to cart and place order"></a>
+<h3 class="failures">End-to-End Test - Add to cart and place order</h3>
+<span class="code">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage(HomePageSteps.java:35)
+	at ✽.I navigate to the demoblaze homepage(file:///C:/Users/sulth/FinalProj/src/test/resources/web/features/login.feature:30)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Open a product from the homepage"></a>
+<h3 class="failures">Open a product from the homepage</h3>
+<span class="code">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage(HomePageSteps.java:35)
+	at ✽.I navigate to the demoblaze homepage(file:///C:/Users/sulth/FinalProj/src/test/resources/web/features/login.feature:14)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Open homepage and verify title"></a>
+<h3 class="failures">Open homepage and verify title</h3>
+<span class="code">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage(HomePageSteps.java:35)
+	at ✽.I navigate to the demoblaze homepage(file:///C:/Users/sulth/FinalProj/src/test/resources/web/features/login.feature:5)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Try login with wrong credentials (Negative)"></a>
+<h3 class="failures">Try login with wrong credentials (Negative)</h3>
+<span class="code">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage(HomePageSteps.java:35)
+	at ✽.I navigate to the demoblaze homepage(file:///C:/Users/sulth/FinalProj/src/test/resources/web/features/login.feature:19)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="View category Phones"></a>
+<h3 class="failures">View category Phones</h3>
+<span class="code">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage(HomePageSteps.java:35)
+	at ✽.I navigate to the demoblaze homepage(file:///C:/Users/sulth/FinalProj/src/test/resources/web/features/login.feature:9)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -81,109 +144,103 @@
 </tr>
 </thead>
 <tr>
-<td class="success">Add product to cart</td>
-<td class="success">18.002s</td>
-<td class="success">passed</td>
+<td class="failures">Add product to cart</td>
+<td class="failures">0.062s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">End-to-End Test - Add to cart and place order</td>
-<td class="success">44.642s</td>
-<td class="success">passed</td>
+<td class="failures">End-to-End Test - Add to cart and place order</td>
+<td class="failures">0.033s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">Open a product from the homepage</td>
-<td class="success">10.416s</td>
-<td class="success">passed</td>
+<td class="failures">Open a product from the homepage</td>
+<td class="failures">0.017s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">Open homepage and verify title</td>
-<td class="success">10.631s</td>
-<td class="success">passed</td>
+<td class="failures">Open homepage and verify title</td>
+<td class="failures">0.039s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">Try login with wrong credentials (Negative)</td>
-<td class="success">36.712s</td>
-<td class="success">passed</td>
+<td class="failures">Try login with wrong credentials (Negative)</td>
+<td class="failures">0.014s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">View category Phones</td>
-<td class="success">11.860s</td>
-<td class="success">passed</td>
+<td class="failures">View category Phones</td>
+<td class="failures">0.014s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>
 @web
 Scenario: Open homepage and verify title      ?[90m# src/test/resources/web/features/login.feature:4?[0m
-  ?[32mGiven ?[0m?[32mI navigate to the demoblaze homepage?[0m  ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
-  ?[32mThen ?[0m?[32mI should see the title ?[0m?[32m?[1m&quot;PRODUCT STORE&quot;?[0m ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeTheTitle(java.lang.String)?[0m
+  ?[31mGiven ?[0m?[31mI navigate to the demoblaze homepage?[0m  ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
+      ?[31mjava.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage(HomePageSteps.java:35)
+	at ✽.I navigate to the demoblaze homepage(file:///C:/Users/sulth/FinalProj/src/test/resources/web/features/login.feature:5)
+?[0m
+  ?[36mThen ?[0m?[36mI should see the title ?[0m?[36m?[1m&quot;PRODUCT STORE&quot;?[0m ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeTheTitle(java.lang.String)?[0m
 
 @web
 Scenario: View category Phones               ?[90m# src/test/resources/web/features/login.feature:8?[0m
-  ?[32mGiven ?[0m?[32mI navigate to the demoblaze homepage?[0m ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
-  ?[32mWhen ?[0m?[32mI click on the ?[0m?[32m?[1m&quot;Phones&quot;?[0m?[32m category?[0m      ?[90m# web.stepdefinitions.HomePageSteps.iClickOnTheCategory(java.lang.String)?[0m
-  ?[32mThen ?[0m?[32mI should see phones listed?[0m            ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeePhonesListed()?[0m
+  ?[31mGiven ?[0m?[31mI navigate to the demoblaze homepage?[0m ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
+      ?[31mjava.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage(HomePageSteps.java:35)
+	at ✽.I navigate to the demoblaze homepage(file:///C:/Users/sulth/FinalProj/src/test/resources/web/features/login.feature:9)
+?[0m
+  ?[36mWhen ?[0m?[36mI click on the ?[0m?[36m?[1m&quot;Phones&quot;?[0m?[36m category?[0m      ?[90m# web.stepdefinitions.HomePageSteps.iClickOnTheCategory(java.lang.String)?[0m
+  ?[36mThen ?[0m?[36mI should see phones listed?[0m            ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeePhonesListed()?[0m
 
 @web
 Scenario: Open a product from the homepage   ?[90m# src/test/resources/web/features/login.feature:13?[0m
-  ?[32mGiven ?[0m?[32mI navigate to the demoblaze homepage?[0m ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
-  ?[32mWhen ?[0m?[32mI click on the first product?[0m          ?[90m# web.stepdefinitions.HomePageSteps.iClickOnTheFirstProduct()?[0m
-  ?[32mThen ?[0m?[32mI should see the product details?[0m      ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeTheProductDetails()?[0m
+  ?[31mGiven ?[0m?[31mI navigate to the demoblaze homepage?[0m ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
+      ?[31mjava.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage(HomePageSteps.java:35)
+	at ✽.I navigate to the demoblaze homepage(file:///C:/Users/sulth/FinalProj/src/test/resources/web/features/login.feature:14)
+?[0m
+  ?[36mWhen ?[0m?[36mI click on the first product?[0m          ?[90m# web.stepdefinitions.HomePageSteps.iClickOnTheFirstProduct()?[0m
+  ?[36mThen ?[0m?[36mI should see the product details?[0m      ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeTheProductDetails()?[0m
 
 @web
 Scenario: Try login with wrong credentials (Negative)      ?[90m# src/test/resources/web/features/login.feature:18?[0m
-  ?[32mGiven ?[0m?[32mI navigate to the demoblaze homepage?[0m               ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
-  ?[32mWhen ?[0m?[32mI login with ?[0m?[32m?[1m&quot;RANDOMUSERNAMEKOKOKO&quot;?[0m?[32m and ?[0m?[32m?[1m&quot;wrongpass&quot;?[0m ?[90m# web.stepdefinitions.HomePageSteps.iLoginWithAnd(java.lang.String,java.lang.String)?[0m
-  ?[32mThen ?[0m?[32mI should see a login error?[0m                          ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeALoginError()?[0m
+  ?[31mGiven ?[0m?[31mI navigate to the demoblaze homepage?[0m               ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
+      ?[31mjava.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage(HomePageSteps.java:35)
+	at ✽.I navigate to the demoblaze homepage(file:///C:/Users/sulth/FinalProj/src/test/resources/web/features/login.feature:19)
+?[0m
+  ?[36mWhen ?[0m?[36mI login with ?[0m?[36m?[1m&quot;RANDOMUSERNAMEKOKOKO&quot;?[0m?[36m and ?[0m?[36m?[1m&quot;wrongpass&quot;?[0m ?[90m# web.stepdefinitions.HomePageSteps.iLoginWithAnd(java.lang.String,java.lang.String)?[0m
+  ?[36mThen ?[0m?[36mI should see a login error?[0m                          ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeALoginError()?[0m
 
 @web
 Scenario: Add product to cart                ?[90m# src/test/resources/web/features/login.feature:23?[0m
-  ?[32mGiven ?[0m?[32mI navigate to the demoblaze homepage?[0m ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
-  ?[32mWhen ?[0m?[32mI click on the first product?[0m          ?[90m# web.stepdefinitions.HomePageSteps.iClickOnTheFirstProduct()?[0m
-  ?[32mAnd ?[0m?[32mI add it to the cart?[0m                   ?[90m# web.stepdefinitions.HomePageSteps.iAddItToTheCart()?[0m
-  ?[32mThen ?[0m?[32mI should see a confirmation alert?[0m     ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeAConfirmationAlert()?[0m
+  ?[31mGiven ?[0m?[31mI navigate to the demoblaze homepage?[0m ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
+      ?[31mjava.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage(HomePageSteps.java:35)
+	at ✽.I navigate to the demoblaze homepage(file:///C:/Users/sulth/FinalProj/src/test/resources/web/features/login.feature:24)
+?[0m
+  ?[36mWhen ?[0m?[36mI click on the first product?[0m          ?[90m# web.stepdefinitions.HomePageSteps.iClickOnTheFirstProduct()?[0m
+  ?[36mAnd ?[0m?[36mI add it to the cart?[0m                   ?[90m# web.stepdefinitions.HomePageSteps.iAddItToTheCart()?[0m
+  ?[36mThen ?[0m?[36mI should see a confirmation alert?[0m     ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeAConfirmationAlert()?[0m
 
 @web
 Scenario: End-to-End Test - Add to cart and place order ?[90m# src/test/resources/web/features/login.feature:29?[0m
-  ?[32mGiven ?[0m?[32mI navigate to the demoblaze homepage?[0m            ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
-  ?[32mWhen ?[0m?[32mI click on the first product?[0m                     ?[90m# web.stepdefinitions.HomePageSteps.iClickOnTheFirstProduct()?[0m
-  ?[32mAnd ?[0m?[32mI add it to the cart?[0m                              ?[90m# web.stepdefinitions.HomePageSteps.iAddItToTheCart()?[0m
-  ?[32mAnd ?[0m?[32mI should see a confirmation alert?[0m                 ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeAConfirmationAlert()?[0m
-  ?[32mAnd ?[0m?[32mI go to the cart and place the order with details?[0m ?[90m# web.stepdefinitions.HomePageSteps.iGoToTheCartAndPlaceTheOrderWithDetails()?[0m
-  ?[32mThen ?[0m?[32mI should see a purchase confirmation?[0m             ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeAPurchaseConfirmation()?[0m
-</pre>
-</span>
-</div>
-<div id="tab2" class="tab">
-<h2>Standard error</h2>
-<span class="code">
-<pre>Apr 30, 2025 4:57:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 135
-Apr 30, 2025 4:57:50 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-Apr 30, 2025 4:57:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 135
-Apr 30, 2025 4:57:59 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-Apr 30, 2025 4:58:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 135
-Apr 30, 2025 4:58:10 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-Apr 30, 2025 4:58:32 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 135
-Apr 30, 2025 4:58:32 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-Apr 30, 2025 4:59:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 135
-Apr 30, 2025 4:59:02 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-Apr 30, 2025 4:59:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 135
-Apr 30, 2025 4:59:19 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+  ?[31mGiven ?[0m?[31mI navigate to the demoblaze homepage?[0m            ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
+      ?[31mjava.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because &quot;this.driver&quot; is null
+	at web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage(HomePageSteps.java:35)
+	at ✽.I navigate to the demoblaze homepage(file:///C:/Users/sulth/FinalProj/src/test/resources/web/features/login.feature:30)
+?[0m
+  ?[36mWhen ?[0m?[36mI click on the first product?[0m                     ?[90m# web.stepdefinitions.HomePageSteps.iClickOnTheFirstProduct()?[0m
+  ?[36mAnd ?[0m?[36mI add it to the cart?[0m                              ?[90m# web.stepdefinitions.HomePageSteps.iAddItToTheCart()?[0m
+  ?[36mAnd ?[0m?[36mI should see a confirmation alert?[0m                 ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeAConfirmationAlert()?[0m
+  ?[36mAnd ?[0m?[36mI go to the cart and place the order with details?[0m ?[90m# web.stepdefinitions.HomePageSteps.iGoToTheCartAndPlaceTheOrderWithDetails()?[0m
+  ?[36mThen ?[0m?[36mI should see a purchase confirmation?[0m             ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeAPurchaseConfirmation()?[0m
 </pre>
 </span>
 </div>
@@ -195,7 +252,7 @@ WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need t
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.11.1</a> at 30 Apr 2025, 17.00.01</p>
+<a href="http://www.gradle.org">Gradle 8.11.1</a> at 2 May 2025, 10.39.00</p>
 </div>
 </div>
 </body>
