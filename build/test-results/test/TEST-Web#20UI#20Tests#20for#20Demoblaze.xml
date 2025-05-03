@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Web UI Tests for Demoblaze" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-05-02T08:26:27" hostname="SALES" time="134.385">
+<testsuite name="Web UI Tests for Demoblaze" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-05-03T04:59:31" hostname="DESKTOP-UG1707P" time="30.676">
   <properties/>
-  <testcase name="Open homepage and verify title" classname="Web UI Tests for Demoblaze" time="17.598"/>
-  <testcase name="View category Phones" classname="Web UI Tests for Demoblaze" time="14.274"/>
-  <testcase name="Open a product from the homepage" classname="Web UI Tests for Demoblaze" time="20.201"/>
-  <testcase name="Try login with wrong credentials (Negative)" classname="Web UI Tests for Demoblaze" time="24.193"/>
-  <testcase name="Add product to cart" classname="Web UI Tests for Demoblaze" time="24.258"/>
-  <testcase name="End-to-End Test - Add to cart and place order" classname="Web UI Tests for Demoblaze" time="33.858"/>
+  <testcase name="Open homepage and verify title" classname="Web UI Tests for Demoblaze" time="4.648"/>
+  <testcase name="View category Phones" classname="Web UI Tests for Demoblaze" time="2.669"/>
+  <testcase name="Open a product from the homepage" classname="Web UI Tests for Demoblaze" time="3.559"/>
+  <testcase name="Try login with wrong credentials (Negative)" classname="Web UI Tests for Demoblaze" time="5.763"/>
+  <testcase name="Add product to cart" classname="Web UI Tests for Demoblaze" time="5.99"/>
+  <testcase name="End-to-End Test - Add to cart and place order" classname="Web UI Tests for Demoblaze" time="8.047"/>
   <system-out><![CDATA[
 @web
 Scenario: Open homepage and verify title      ?[90m# src/test/resources/web/features/login.feature:4?[0m
@@ -47,29 +47,29 @@ Scenario: End-to-End Test - Add to cart and place order ?[90m# src/test/resource
   ?[32mAnd ?[0m?[32mI go to the cart and place the order with details?[0m ?[90m# web.stepdefinitions.HomePageSteps.iGoToTheCartAndPlaceTheOrderWithDetails()?[0m
   ?[32mThen ?[0m?[32mI should see a purchase confirmation?[0m             ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeAPurchaseConfirmation()?[0m
 ]]></system-out>
-  <system-err><![CDATA[May 02, 2025 3:26:40 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <system-err><![CDATA[May 03, 2025 11:59:34 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 135
-May 02, 2025 3:26:40 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+May 03, 2025 11:59:34 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-May 02, 2025 3:26:51 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 03, 2025 11:59:36 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 135
-May 02, 2025 3:26:51 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+May 03, 2025 11:59:36 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-May 02, 2025 3:27:12 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 03, 2025 11:59:39 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 135
-May 02, 2025 3:27:12 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+May 03, 2025 11:59:39 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-May 02, 2025 3:27:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 03, 2025 11:59:43 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 135
-May 02, 2025 3:27:24 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+May 03, 2025 11:59:43 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-May 02, 2025 3:27:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 03, 2025 11:59:48 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 135
-May 02, 2025 3:27:52 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+May 03, 2025 11:59:48 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-May 02, 2025 3:28:14 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 03, 2025 11:59:54 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 135
-May 02, 2025 3:28:14 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+May 03, 2025 11:59:54 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>
