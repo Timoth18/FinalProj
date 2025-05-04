@@ -24,10 +24,10 @@ jobs:
         run: chmod +x gradlew
 
       - name: Run API Tests
-        run: ./gradlew apiTest
+        run: ./gradlew apiTest --rerun-tasks
 
       - name: Run Web Tests
-        run: ./gradlew webTest
+        run: ./gradlew webTest --rerun-tasks
 
       - name: Upload Cucumber HTML report
         uses: actions/upload-artifact@v4
