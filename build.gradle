@@ -26,9 +26,4 @@ tasks.register("webTest", Test) {
 
 test {
     useJUnit()
-
-    reports {
-        html.required.set(true)
-    }
-
 }
