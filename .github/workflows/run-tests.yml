@@ -26,6 +26,12 @@ jobs:
       - name: Run API Tests
         run: ./gradlew apiTest --rerun-tasks
 
+      - name: Upload Cucumber HTML report
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-report
+          path: build/reports/cucumber-report.html
+
       - name: Run Web Tests
         run: ./gradlew webTest --rerun-tasks
 
