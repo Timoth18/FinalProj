@@ -1,12 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Web UI Tests for Demoblaze" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-05-05T07:34:03" hostname="SALES" time="136.03">
+<testsuite name="Web UI Tests for Demoblaze" tests="6" skipped="0" failures="2" errors="0" timestamp="2025-05-05T08:46:31" hostname="SALES" time="259.184">
   <properties/>
-  <testcase name="Open homepage and verify title" classname="Web UI Tests for Demoblaze" time="14.23"/>
-  <testcase name="View category Phones" classname="Web UI Tests for Demoblaze" time="11.18"/>
-  <testcase name="Open a product from the homepage" classname="Web UI Tests for Demoblaze" time="13.631"/>
-  <testcase name="Try login with wrong credentials (Negative)" classname="Web UI Tests for Demoblaze" time="22.392"/>
-  <testcase name="Add product to cart" classname="Web UI Tests for Demoblaze" time="29.894"/>
-  <testcase name="End-to-End Test - Add to cart and place order" classname="Web UI Tests for Demoblaze" time="44.703"/>
+  <testcase name="Open homepage and verify title" classname="Web UI Tests for Demoblaze" time="20.805"/>
+  <testcase name="View category Phones" classname="Web UI Tests for Demoblaze" time="8.092"/>
+  <testcase name="Open a product from the homepage" classname="Web UI Tests for Demoblaze" time="184.297">
+    <failure message="io.cucumber.core.exception.CucumberException: Failed to instantiate class web.stepdefinitions.HomePageSteps" type="io.cucumber.core.exception.CucumberException">io.cucumber.core.exception.CucumberException: Failed to instantiate class web.stepdefinitions.HomePageSteps
+	at app//io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:67)
+	at app//io.cucumber.core.backend.DefaultObjectFactory.getInstance(DefaultObjectFactory.java:45)
+	at app//io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at app//io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at app//io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at app//io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at app//io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at app//io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at app//io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at app//io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at app//io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at app//io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at app//io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at app//io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)
+	at app//io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at app//io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)
+	at app//io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at app//io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at app//io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at app//org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at app//org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at app//org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at app//org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at app//org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at app//org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at app//io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at app//io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at app//io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at app//org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at app//org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at app//org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at app//org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at app//org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at app//io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
+	at app//io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
+	at app//io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
+	at app//io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
+	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at app//org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	at java.base@23.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@23.0.1/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:74)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:53)
+	... 60 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'SALES', ip: '192.168.1.70'
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:620)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at app//org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
+	at app//org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at app//org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at app//org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
+	at app//web.stepdefinitions.HomePageSteps.&lt;init&gt;(HomePageSteps.java:25)
+	at java.base@23.0.1/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	... 63 more
+Caused by: org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: driver.version: ChromeDriver
+	at app//org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:397)
+	at app//org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at app//org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at app//org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:353)
+	at app//org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at app//org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at app//org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	... 71 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:2004)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2139)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:380)
+	... 81 more
+</failure>
+  </testcase>
+  <testcase name="Try login with wrong credentials (Negative)" classname="Web UI Tests for Demoblaze" time="14.615"/>
+  <testcase name="Add product to cart" classname="Web UI Tests for Demoblaze" time="17.486"/>
+  <testcase name="End-to-End Test - Add to cart and place order" classname="Web UI Tests for Demoblaze" time="13.887">
+    <failure message="org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: .card-title a (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.14.0', revision: 'e5a96349ce'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.116, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: C:\Users\sulth\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62005}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62005/devtoo..., se:cdpVersion: 135.0.7049.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: dbc0acb1f924211a4e5adcba4e6f79a0" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: .card-title a (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.116, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: C:\Users\sulth\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62005}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62005/devtoo..., se:cdpVersion: 135.0.7049.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dbc0acb1f924211a4e5adcba4e6f79a0
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at app//web.stepdefinitions.HomePageSteps.iClickOnTheFirstProduct(HomePageSteps.java:55)
+	at ✽.I click on the first product(file:///C:/Users/sulth/FinalProj/src/test/resources/web/features/login.feature:31)
+</failure>
+  </testcase>
   <system-out><![CDATA[
 @web
 Scenario: Open homepage and verify title      ?[90m# src/test/resources/web/features/login.feature:4?[0m
@@ -21,9 +136,111 @@ Scenario: View category Phones               ?[90m# src/test/resources/web/featu
 
 @web
 Scenario: Open a product from the homepage   ?[90m# src/test/resources/web/features/login.feature:13?[0m
-  ?[32mGiven ?[0m?[32mI navigate to the demoblaze homepage?[0m ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
-  ?[32mWhen ?[0m?[32mI click on the first product?[0m          ?[90m# web.stepdefinitions.HomePageSteps.iClickOnTheFirstProduct()?[0m
-  ?[32mThen ?[0m?[32mI should see the product details?[0m      ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeTheProductDetails()?[0m
+  ?[31mGiven ?[0m?[31mI navigate to the demoblaze homepage?[0m ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
+      ?[31mio.cucumber.core.exception.CucumberException: Failed to instantiate class web.stepdefinitions.HomePageSteps
+	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:67)
+	at io.cucumber.core.backend.DefaultObjectFactory.getInstance(DefaultObjectFactory.java:45)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunBeforeAllHooks.evaluate(Cucumber.java:266)
+	at io.cucumber.junit.Cucumber$RunAfterAllHooks.evaluate(Cucumber.java:281)
+	at io.cucumber.junit.Cucumber$StartTestRun.evaluate(Cucumber.java:233)
+	at io.cucumber.junit.Cucumber$FinishTestRun.evaluate(Cucumber.java:248)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:74)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at io.cucumber.core.backend.DefaultObjectFactory.cacheNewInstance(DefaultObjectFactory.java:53)
+	... 60 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'SALES', ip: '192.168.1.70'
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:620)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:163)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:72)
+	at web.stepdefinitions.HomePageSteps.<init>(HomePageSteps.java:25)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	... 63 more
+Caused by: org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:397)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:353)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:115)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	... 71 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:2004)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2139)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:380)
+	... 81 more
+?[0m
+  ?[36mWhen ?[0m?[36mI click on the first product?[0m          ?[90m# web.stepdefinitions.HomePageSteps.iClickOnTheFirstProduct()?[0m
+  ?[36mThen ?[0m?[36mI should see the product details?[0m      ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeTheProductDetails()?[0m
 
 @web
 Scenario: Try login with wrong credentials (Negative)      ?[90m# src/test/resources/web/features/login.feature:18?[0m
@@ -41,35 +258,42 @@ Scenario: Add product to cart                ?[90m# src/test/resources/web/featu
 @web
 Scenario: End-to-End Test - Add to cart and place order ?[90m# src/test/resources/web/features/login.feature:29?[0m
   ?[32mGiven ?[0m?[32mI navigate to the demoblaze homepage?[0m            ?[90m# web.stepdefinitions.HomePageSteps.iNavigateToTheDemoblazeHomepage()?[0m
-  ?[32mWhen ?[0m?[32mI click on the first product?[0m                     ?[90m# web.stepdefinitions.HomePageSteps.iClickOnTheFirstProduct()?[0m
-  ?[32mAnd ?[0m?[32mI add it to the cart?[0m                              ?[90m# web.stepdefinitions.HomePageSteps.iAddItToTheCart()?[0m
-  ?[32mAnd ?[0m?[32mI should see a confirmation alert?[0m                 ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeAConfirmationAlert()?[0m
-  ?[32mAnd ?[0m?[32mI go to the cart and place the order with details?[0m ?[90m# web.stepdefinitions.HomePageSteps.iGoToTheCartAndPlaceTheOrderWithDetails()?[0m
-  ?[32mThen ?[0m?[32mI should see a purchase confirmation?[0m             ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeAPurchaseConfirmation()?[0m
+  ?[31mWhen ?[0m?[31mI click on the first product?[0m                     ?[90m# web.stepdefinitions.HomePageSteps.iClickOnTheFirstProduct()?[0m
+      ?[31morg.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: .card-title a (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.14.0', revision: 'e5a96349ce'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.116, chrome: {chromedriverVersion: 135.0.7049.114 (63fd8a7d9d0..., userDataDir: C:\Users\sulth\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62005}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62005/devtoo..., se:cdpVersion: 135.0.7049.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dbc0acb1f924211a4e5adcba4e6f79a0
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at web.stepdefinitions.HomePageSteps.iClickOnTheFirstProduct(HomePageSteps.java:55)
+	at ✽.I click on the first product(file:///C:/Users/sulth/FinalProj/src/test/resources/web/features/login.feature:31)
+?[0m
+  ?[36mAnd ?[0m?[36mI add it to the cart?[0m                              ?[90m# web.stepdefinitions.HomePageSteps.iAddItToTheCart()?[0m
+  ?[36mAnd ?[0m?[36mI should see a confirmation alert?[0m                 ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeAConfirmationAlert()?[0m
+  ?[36mAnd ?[0m?[36mI go to the cart and place the order with details?[0m ?[90m# web.stepdefinitions.HomePageSteps.iGoToTheCartAndPlaceTheOrderWithDetails()?[0m
+  ?[36mThen ?[0m?[36mI should see a purchase confirmation?[0m             ?[90m# web.stepdefinitions.HomePageSteps.iShouldSeeAPurchaseConfirmation()?[0m
 ]]></system-out>
-  <system-err><![CDATA[May 05, 2025 2:34:14 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <system-err><![CDATA[May 05, 2025 3:46:48 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 135
-May 05, 2025 2:34:14 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+May 05, 2025 3:46:48 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-May 05, 2025 2:34:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 05, 2025 3:46:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 135
-May 05, 2025 2:34:24 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+May 05, 2025 3:46:57 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-May 05, 2025 2:34:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 05, 2025 3:50:11 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 135
-May 05, 2025 2:34:33 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+May 05, 2025 3:50:11 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-May 05, 2025 2:34:47 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 05, 2025 3:50:20 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 135
-May 05, 2025 2:34:47 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+May 05, 2025 3:50:20 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-May 05, 2025 2:35:12 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 05, 2025 3:50:38 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 135
-May 05, 2025 2:35:12 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-May 05, 2025 2:35:56 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 135
-May 05, 2025 2:35:56 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+May 05, 2025 3:50:38 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 135.0.7049.116. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.14.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>

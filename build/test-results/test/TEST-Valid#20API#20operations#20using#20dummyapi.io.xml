@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Valid API operations using dummyapi.io" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-05-05T07:33:54" hostname="SALES" time="8.689">
+<testsuite name="Valid API operations using dummyapi.io" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-05-05T08:46:20" hostname="SALES" time="10.415">
   <properties/>
-  <testcase name="Get a user by valid ID" classname="Valid API operations using dummyapi.io" time="5.799"/>
-  <testcase name="Try to get a non-existing user (Negative)" classname="Valid API operations using dummyapi.io" time="0.442"/>
-  <testcase name="Get list of users" classname="Valid API operations using dummyapi.io" time="0.458"/>
-  <testcase name="Get tags" classname="Valid API operations using dummyapi.io" time="1.579"/>
-  <testcase name="Get paginated list of users" classname="Valid API operations using dummyapi.io" time="0.408"/>
+  <testcase name="Get a user by valid ID" classname="Valid API operations using dummyapi.io" time="6.01"/>
+  <testcase name="Try to get a non-existing user (Negative)" classname="Valid API operations using dummyapi.io" time="0.533"/>
+  <testcase name="Get list of users" classname="Valid API operations using dummyapi.io" time="0.892"/>
+  <testcase name="Get tags" classname="Valid API operations using dummyapi.io" time="2.511"/>
+  <testcase name="Get paginated list of users" classname="Valid API operations using dummyapi.io" time="0.461"/>
   <system-out><![CDATA[
 @api
 Scenario: Get a user by valid ID                  ?[90m# src/test/resources/api/features/user.feature:4?[0m
