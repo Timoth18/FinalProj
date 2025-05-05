@@ -23,11 +23,8 @@ jobs:
       - name: Grant execute permission
         run: chmod +x gradlew
 
-      - name: Run API Tests
-        run: ./gradlew apiTest
-
-      - name: Run Web Tests
-        run: ./gradlew webTest
+      - name: Run All Tests
+        run: ./gradlew test
 
       - name: Upload Cucumber HTML report
         uses: actions/upload-artifact@v4
